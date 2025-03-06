@@ -1,0 +1,14 @@
+@import './base.css';
+@import 'tailwindcss';
+
+@theme {
+    --color-main-color: var(--main-color);
+    --color-main-gray: var(--color-gray);
+}
+
+#app {
+}
+
+body {
+    background: var(--main-bg-color);
+}

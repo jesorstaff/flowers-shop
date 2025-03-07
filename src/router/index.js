@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import NotFound from '@/views/NotFound.vue'
 import HomeView from '../views/HomeView.vue'
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
-import CatalogView from '@/views/CatalogView.vue'
+import ShopView from '@/views/ShopView.vue'
 import CartView from '@/views/CartView.vue'
 import LoginView from '@/views/LoginView.vue'
 import RegisterView from '@/views/RegisterView.vue'
@@ -23,7 +23,7 @@ const router = createRouter({
                 {
                     path: '/shop',
                     name: 'shop',
-                    component: CatalogView,
+                    component: ShopView,
                 },
                 {
                     path: '/shop/:slug',

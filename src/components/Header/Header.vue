@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-import Login from '@/components/Header/icons/Login.vue'
-import Cart from '@/components/Header/icons/Cart.vue'
+import Login from '@/components/Header/icons/LoginIcon.vue'
+import Cart from '@/components/Header/icons/CartIcon.vue'
 import Icon from '@/components/Header/Icon.vue'
 
 const menuList = [

@@ -2,6 +2,10 @@
 import { RouterLink } from 'vue-router'
 import CatalogData from '@/data/Catalog.js'
 import CartIcon from '@/components/Header/icons/CartIcon.vue'
+import DeliteIcon from '@/assets/icons/DeliteIcon.vue'
+import useCart from '@/hooks/useCart'
+
+const { addToCard, removeToCard, isInCart } = useCart()
 </script>
 
 <template>
@@ -18,15 +22,27 @@ import CartIcon from '@/components/Header/icons/CartIcon.vue'
                         class="w-full object-cover"
                     />
                     <p class="mt-3">{{ element.title }}</p>
-                    <div class="flex justify-between items-center mt-5">
+                    <div
+                        class="flex justify-between items-center mt-5 relative"
+                    >
                         <p class="text-sm text-gray-500">
                             {{ element.price }}$
                         </p>
                         <button
-                            class="text-main-color flex items-center gap-2 text-sm cursor-pointer"
+                            v-if="isInCart(element)"
+                            @click="(event) => removeToCard(event, element)"
+                        >
+                            <DeliteIcon />
+                        </button>
+                        <button
+                            class="absolute right-0 z-10 text-main-color flex items-center gap-2 text-sm cursor-pointer disabled:opacity-50 disabled:cursor-default disabled:right-8"
+                            @click="(event) => addToCard(event, element)"
+                            :disabled="isInCart(element)"
                         >
                             <CartIcon class="w-5 h-5" />
-                            Add to Cart
+                            {{
+                                isInCart(element) ? 'В корзине' : 'Add to Cart'
+                            }}
                         </button>
                     </div>
                 </RouterLink>

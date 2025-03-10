@@ -41,9 +41,11 @@ const menuList = [
                     <Icon #icon>
                         <Login />
                     </Icon>
-                    <Icon #icon>
-                        <Cart />
-                    </Icon>
+                    <RouterLink to="/cart">
+                        <Icon #icon>
+                            <Cart />
+                        </Icon>
+                    </RouterLink>
                 </div>
             </div>
         </div>

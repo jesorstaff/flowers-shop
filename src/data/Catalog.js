@@ -6,6 +6,7 @@ import userIcon from '@/assets/images/userIcon.png'
 
 const CatalogData = [
     {
+        id: 1,
         image: flower7,
         title: 'Periwinkle',
         slug: 'periwinkle',
@@ -36,6 +37,7 @@ const CatalogData = [
         ],
     },
     {
+        id: 2,
         image: flower8,
         title: 'Daisy',
         slug: 'daisy',
@@ -66,6 +68,7 @@ const CatalogData = [
         ],
     },
     {
+        id: 3,
         image: flower9,
         title: 'Sun flower',
         slug: 'sunflower',
@@ -96,6 +99,7 @@ const CatalogData = [
         ],
     },
     {
+        id: 4,
         image: flower10,
         title: 'White Rose',
         slug: 'white-rose',

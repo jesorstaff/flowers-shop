@@ -4,6 +4,7 @@
 @theme {
     --color-main-color: var(--main-color);
     --color-main-gray: var(--color-gray);
+    --color-gray-dark: #454545;
 }
 
 #app {
